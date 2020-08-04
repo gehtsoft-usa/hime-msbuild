@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Hime.Build.Task</id>
+        <version>0.1.6</version>
+        <authors>Gehtsoft</authors>
+        <projectUrl>https://github.com/gehtsoft-usa/hime-msbuild</projectUrl>
+        <license type="expression">LGPL-3.0-or-later</license>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>Initial Release</releaseNotes>
+        <description>MSBuild task to compile Hime grammars</description>
+    </metadata>
+    <files>
+        <file src="../build/Hime.Build.Task.props" target="build" />
+        <file src="../buildMultiTargeting/Hime.Build.Task.props" target="buildMultiTargeting" />
+        <file src="../bin/Release/net46/Hime.Build.Task.dll" target="tasks/net46" />
+        <file src="../bin/Release/net46/Hime.SDK.dll" target="tasks/net46" />
+        <file src="../bin/Release/net46/Hime.Redist.dll" target="tasks/net46" />
+        <file src="../bin/Release/netstandard2.0/Hime.Build.Task.dll" target="tasks/netstandard2.0" />
+        <file src="../bin/Release/netstandard2.0/Hime.Build.Task.deps.json" target="tasks/netstandard2.0" />
+        <file src="../bin/Release/netstandard2.0/Hime.SDK.dll" target="tasks/netstandard2.0" />
+        <file src="../bin/Release/netstandard2.0/Hime.Redist.dll" target="tasks/netstandard2.0" />
+    </files>
+</package>

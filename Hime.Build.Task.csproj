@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="test\**" />
+    <EmbeddedResource Remove="test\**" />
+    <None Remove="test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="build\Hime.Build.Task.props" PackagePath="build\" />
+    <Content Include="buildMultiTargeting\Hime.Build.Task.props" PackagePath="buildMultiTargeting\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hime.SDK" />
+    <PackageReference Include="Microsoft.Build.Framework">
+      <Version>15.1.1012</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Build.Utilities.Core">
+      <Version>15.1.1012</Version>
+    </PackageReference>
+    <PackageReference Update="@(PackageReference)" PrivateAssets="All" />
+    <PackageReference Update="Hime.SDK" Version="3.5.0" />
+  </ItemGroup>
+</Project>
