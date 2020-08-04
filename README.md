@@ -11,12 +11,12 @@ This solution is an alternative offering "native" msbuild task to compile gramma
 # How to use?
 
 1) Add task package to your csproj file:
-
-    &lt;ItemGroup&gt;
+```
+    <ItemGroup>
       ...
       &lt;PackageReference Include="Hime.Build.Task" Version="0.1.6" IncludeAssets="build" /&gt;
     &lt;/ItemGroup&gt;
-
+```
 2) Add the target to compile grammar before source code compilation
     <Target Name="CompileGrammar" BeforeTargets="BeforeCompile">
      <CompileGrammar GrammarName="MyGrammar" 
