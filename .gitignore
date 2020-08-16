@@ -5,3 +5,4 @@ test
 .nuget
 .git
 .svn
+*.nupkg
